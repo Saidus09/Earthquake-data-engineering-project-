@@ -16,10 +16,19 @@
 3. **Transform & Load**: Обогащение и фильтрация данных через DuckDB с последующей загрузкой в PostgreSQL.
 4. **Analysis**: Подключение Metabase к PostgreSQL для построения аналитических отчетов.
 
+## Структура проекта
+* `dags/` — описание пайплайнов Airflow.
+* `metabase/` — Dockerfile и конфигурация для развертывания BI-инструмента.
+* `docker-compose.yaml` — описание всех сервисов и связей между ними.
+
 ## Инструкция по запуску
-1.Склонируйте репозиторий
+1. Склонируйте репозиторий
 
 2. 
 ```bash
 docker-compose up -d --build
 ```
+
+Пример получившейся визуализации:
+<img width="1280" height="671" alt="image" src="https://github.com/user-attachments/assets/4cce6bfa-5db1-48f3-b2eb-8b13ca5bb02e" />
+
