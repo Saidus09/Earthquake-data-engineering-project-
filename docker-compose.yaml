@@ -93,6 +93,8 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
     restart: always
+    volumes:
+      - ./postgres_dwh_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
   minio:

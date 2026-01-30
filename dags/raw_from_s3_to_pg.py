@@ -57,6 +57,8 @@ def get_and_transfer_raw_data_to_ods_pg(**context):
 
     con.sql(
         f"""
+        INSTALL postgres;
+        LOAD postgres;
         SET TIMEZONE='UTC';
         INSTALL httpfs;
         LOAD httpfs;
@@ -70,7 +72,7 @@ def get_and_transfer_raw_data_to_ods_pg(**context):
             TYPE postgres,
             HOST 'postgres_dwh',
             PORT 5432,
-            DATABASE postgres,
+            DATABASE 'postgres',
             USER 'postgres',
             PASSWORD '{PASSWORD}'
         );
